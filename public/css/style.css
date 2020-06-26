@@ -1,0 +1,33 @@
+            #menubar {
+                background-color: rgb(193, 202, 202);
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin-top: -14px;
+                font-size: 30px;
+                text-decoration: solid;
+            }
+            
+            #content-background {
+                background-color: rgba(180, 207, 218, 0.712);
+            }
+            
+            #content-background-image {
+                background-image: url('./images/photo-1524995997946-a1c2e315a42f.jpg');
+                height: 35rem;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            h2 {
+                text-align: center;
+                color: brown;
+            }
+            
+            .footer {
+                font-family: auto;
+                text-align: center;
+                font-size: inherit;
+                color: brown;
+                background-color: rgb(193, 202, 202);
+                height: 30px
+            }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> signup page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <%for(i=0;i<nav.length;i++){%>
+                    <li class="nav-item">
+                        
+                        <a class="navbar-brand " href="<%=nav[i].link%>"><%=nav[i].name%></a>
+                    </li>
+                   <%}%>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div id="content-background">
+
+        <div class="container" style="padding-top: 80px; padding-left: 350px;">
+            <div class="col-md-7 col-md-offset-3">
+                <h2>SIGN UP</h2>
+                <form action="/signup/add" method="POST" onsubmit=" return validate()">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputfirstname">Firstname</label>
+                            <input type="text" class="form-control" name="inputfirstname" id="inputfirstname" onkeypress="return /[a-z]/i.test(event.key)"  required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputlastname">Lastname</label>
+                            <input type="text" class="form-control" id="inputlastname" name="inputlastname" onkeypress="return /[a-z]/i.test(event.key)"  required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control"  name="inputEmail4"id="inputEmail4" required>
+                            <label id="check" style="color: red; visibility: hidden;"> Invalid</label>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" minlength="5" maxlength="10" class="form-control" name="inputPassword4" id="inputPassword4" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" name="inputAddress" id="inputAddress" placeholder="1234 Main St" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" name="inputAddress2" id="inputAddress2" placeholder="Apartment, studio, or floor" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" name="inputCity" id="inputCity"onkeypress="return /[a-z]/i.test(event.key)"  required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputState">State</label>
+                            <input type="text" class="form-control"  name="inputState" id="inputState"onkeypress="return /[a-z]/i.test(event.key)" required>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <button  style="margin-left: 155px;" type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">Design and Developed by ICT ACADEMY OF KERALA</div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
