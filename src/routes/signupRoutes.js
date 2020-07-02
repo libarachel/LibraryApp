@@ -23,8 +23,8 @@ signupRouter.post('/add',function(req,res){
     var dada={
         inputfirstname: req.body.inputfirstname,
         inputlastname: req.body.inputlastname,
-        inputEmail4: req.body.inputEmail4,
-        inputPassword4: req.body.inputPassword4,
+        email: req.body.email,
+        password: req.body.password,
         inputAddress2: req.body.inputAddress2,
         inputCity: req.body.inputCity,
         inputState: req.body.inputState
@@ -35,6 +35,7 @@ signupRouter.post('/add',function(req,res){
     res.redirect('/thank');
 
     });
+    
 
 return signupRouter;
 }
